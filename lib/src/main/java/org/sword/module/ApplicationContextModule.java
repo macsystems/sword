@@ -18,13 +18,13 @@ public class ApplicationContextModule<T extends Application> {
         this.app = app;
     }
 
+    @ApplicationContext
     @Provides
     @Singleton
     T provideApplication() {
         return app;
     }
 
-    @ApplicationContext
     @Singleton
     @Provides
     Context provideContext() {
