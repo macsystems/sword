@@ -2,8 +2,11 @@ package org.sword.module;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 
 import org.sword.annotation.ApplicationContext;
+import org.sword.annotation.MainHandler;
 
 import javax.inject.Singleton;
 
@@ -29,5 +32,13 @@ public class ApplicationContextModule<T extends Application> {
     @Provides
     Context provideContext() {
         return app;
+    }
+
+    @MainHandler
+    @Singleton
+    @Provides
+    Handler provideHandler()
+    {
+        return new Handler(Looper.getMainLooper());
     }
 }

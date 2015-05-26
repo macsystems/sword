@@ -54,7 +54,7 @@ android {
 
 
 dependencies {
-    compile 'com.google.dagger:dagger:2.0-SNAPSHOT'
+    compile 'com.google.dagger:dagger:2.0'
     // Annotations for Findbugs Plugin and Reporting
     provided 'com.google.code.findbugs:annotations:3.0.0'
     // adds the @Generated annotation that Android lacks
